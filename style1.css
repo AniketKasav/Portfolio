@@ -1,0 +1,61 @@
+/* Basic styling */
+.drop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(14, 7, 77);
+    
+}
+
+.drop ul li {
+    list-style: none;
+    color: white;
+}
+
+.fas {
+    float: right;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Hide checkbox */
+#check {
+    display: none;
+}
+
+/* Menu styling */
+.ul {
+    position: absolute;
+    top: 50px;
+    right: 100%;
+    width: 200px;
+    background-color:rgb(14, 7, 77);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    transition: left 0.3s ease-in-out;
+}
+
+.ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 850px) {
+    .drop {
+        position: relative;
+    }
+    .nav{
+        display: none;
+    }
+    .ul {
+        display: block;
+    }
+}
+
+/* Show the menu when checked */
+#check:checked ~ .ul {
+    right: 0;
+}
+
